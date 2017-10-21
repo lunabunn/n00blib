@@ -1,3 +1,4 @@
+![Logo](https://github.com/maiorexminor/n00blib_tutorials/blob/master/docs/_media/logo.svg)
 # n00blib
 
 **n00blib** is a simple, lightweight Java game library built by a n00b, for a n00b. It is deployed under the [GNU GPL v3](LICENSE).
