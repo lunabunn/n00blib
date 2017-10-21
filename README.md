@@ -19,3 +19,9 @@ Before you do so, however, please ensure that all [dependencies](#dependencies) 
 **n00blib** was tested in JRE 1.8.0_131. Although it should run without any issues in earlier versions of JRE, it is recommended that you use JRE 1.8.0_131 or higher.
 ### JOGL
 **n00blib** uses JOGL, the Java port of OpenGL, for graphics. Click [here](https://jogamp.org/wiki/index.php/Setting_up_a_JogAmp_project_in_your_favorite_IDE) for a detailed guide on the intallation of JOGL. Make sure to add JOGL to your project's build path once you install it.
+
+## Documentation
+- [Tutorials](https://maiorexminor.github.io/n00blib_tutorials/)
+- [Demo](https://github.com/maiorexminor/n00blib_demo/)  
+
+... more documentation will be added in the future...
