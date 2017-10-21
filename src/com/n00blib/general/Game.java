@@ -91,7 +91,7 @@ public class Game {
 	public void launch() {
 		GameSystem system;
 		
-		if (this.system == null) {system = new GameSystem();}
+		if (this.system == null) {system = new GameSystem.Demo();}
 		else {system = this.system;}
 		
 		GLCanvas gamePane = initGamePane(new GameMaster(system, fps), width, height);

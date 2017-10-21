@@ -79,7 +79,11 @@ public class GameMaster implements GLEventListener, KeyListener, MouseListener, 
 	public void display(GLAutoDrawable drawable) {
 		system.update();
 		this.drawable = drawable;
-		system.draw(drawable.getGL().getGL2());
+		GL2 gl = drawable.getGL().getGL2();
+		gl.glClearColor(0, 0, 0, 1);
+		gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
+		gl.glClear(GL2.GL_DEPTH_BUFFER_BIT);
+		system.draw(gl);
 		
 	}
 	
@@ -111,6 +115,11 @@ public class GameMaster implements GLEventListener, KeyListener, MouseListener, 
 		gl.glVertex2d(x2, y2);
 		gl.glVertex2d(x1, y2);
 		gl.glEnd();
+	}
+	
+	public void setColor(float r, float g, float b, float a) {
+		renderer.setColor(r, g, b, a);
+		drawable.getGL().getGL2().glColor4f(r, g, b, a);
 	}
 
 	@Override
