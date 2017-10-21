@@ -2,6 +2,8 @@
 
 **n00blib** is a simple, lightweight Java game library built by a n00b, for a n00b. It is deployed under the [GNU GPL v3](LICENSE).
 
+**n00blib** is currently in **active develpment**; although it currently lacks some pretty basic features such as changing text font/size, that will be implemented in the near future. Also, any issues or pull requests will **NOT BE** ignored, and probably be addressed in the next few days. Don't believe me? *n00blib version 1.1 was released about 2 hours after the initial version.* Do you believe me now?
+
 ## Installation
 To intall **n00blib**, you can either
 1. Clone the src folder and compile it
