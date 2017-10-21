@@ -1,4 +1,7 @@
 .DS_Store
 bin/*.java
+bin/**/*.java
 src/*.class
+src/**/*.class
 src/*.jar
+src/**/*.jar

@@ -26,6 +26,9 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
 
@@ -57,12 +60,21 @@ public class Game {
 		return canvas;
 	}
 	
-	public void initGameWindow(GLCanvas canvas) {
+	public void initGameWindow(GLCanvas canvas, GameSystem system) {
 		JFrame frame = new JFrame(title);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(canvas);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
+		frame.addWindowListener(new WindowAdapter() {
+
+			@Override
+			public void windowClosed(WindowEvent e) {
+				system.gameEnd();
+				System.exit(0);
+				
+			}
+			
+		});
 		frame.setVisible(true);
 	}
 	
@@ -95,6 +107,6 @@ public class Game {
 		else {system = this.system;}
 		
 		GLCanvas gamePane = initGamePane(new GameMaster(system, fps), width, height);
-		initGameWindow(gamePane);
+		initGameWindow(gamePane, system);
 	}
 }
