@@ -76,4 +76,4 @@ So those are all the events for your `Game System`. You can use them like this :
       }
     }
 
-If you are an observant person, you might've realized that I've been using the word `Object` quite often. But what are `Object`s? Let's get into those next.
+Now. If you are an observant person, you might've realized that I've been mentioning `Object`s-the last one of the three classes you really need to know-quite often, without actually going over them... Yes, we will look at `Object`s next.
