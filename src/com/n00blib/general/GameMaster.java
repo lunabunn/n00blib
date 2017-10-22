@@ -83,43 +83,8 @@ public class GameMaster implements GLEventListener, KeyListener, MouseListener, 
 		gl.glClearColor(0, 0, 0, 1);
 		gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
 		gl.glClear(GL2.GL_DEPTH_BUFFER_BIT);
-		system.draw(gl);
+		system.draw(new Graphics(gl, this));
 		
-	}
-	
-	public void drawString(int x, int y, String string) {
-		String[] strings = string.split("\n");
-		int height = (int) renderer.getBounds("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG").getHeight();
-		renderer.beginRendering(drawable.getSurfaceWidth(), drawable.getSurfaceHeight());
-		for (int i=0; i<strings.length; i++) {
-			renderer.draw(strings[i], x, drawable.getSurfaceHeight() - y - (height*(i+1)) - 5*i);
-		}
-		renderer.endRendering();
-	}
-	
-	public void drawRect(int x1, int y1, int x2, int y2) {
-		GL2 gl = drawable.getGL().getGL2();
-		gl.glBegin(GL2.GL_QUADS);
-		gl.glVertex2i(x1, y1);
-		gl.glVertex2i(x2, y1);
-		gl.glVertex2i(x2, y2);
-		gl.glVertex2i(x1, y2);
-		gl.glEnd();
-	}
-	
-	public void drawRect(double x1, double y1, double x2, double y2) {
-		GL2 gl = drawable.getGL().getGL2();
-		gl.glBegin(GL2.GL_QUADS);
-		gl.glVertex2d(x1, y1);
-		gl.glVertex2d(x2, y1);
-		gl.glVertex2d(x2, y2);
-		gl.glVertex2d(x1, y2);
-		gl.glEnd();
-	}
-	
-	public void setColor(float r, float g, float b, float a) {
-		renderer.setColor(r, g, b, a);
-		drawable.getGL().getGL2().glColor4f(r, g, b, a);
 	}
 
 	@Override

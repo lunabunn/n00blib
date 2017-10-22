@@ -25,9 +25,9 @@ package com.n00blib.object;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
-import com.jogamp.opengl.GL2;
 import com.n00blib.general.GameMaster;
 import com.n00blib.general.GameSystem;
+import com.n00blib.general.Graphics;
 
 public abstract class Object {
 	public double x, y, dx, dy, depth;
@@ -63,9 +63,9 @@ public abstract class Object {
 		return r1.intersects(r2);
 	}
 	
-	public static void render(GL2 gl) {
+	public static void render(Graphics g) {
 		for (int i=0; i<objects.size(); i++) {
-			((Object) objects.get(i)).draw(gl);
+			((Object) objects.get(i)).draw(g);
 		}
 	}
 	
@@ -106,5 +106,5 @@ public abstract class Object {
 		}
 	}
 	
-	public abstract void draw(GL2 gl);
+	public abstract void draw(Graphics g);
 }

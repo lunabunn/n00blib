@@ -21,7 +21,6 @@
 
 package com.n00blib.general;
 
-import com.jogamp.opengl.GL2;
 import com.n00blib.object.Object;
 
 public class GameSystem {
@@ -31,8 +30,8 @@ public class GameSystem {
 		
 	}
 	
-	public void draw(GL2 gl) {
-		Object.render(gl);
+	public void draw(Graphics g) {
+		Object.render(g);
 	}
 	
 	public void update() {
@@ -94,13 +93,13 @@ public class GameSystem {
 	}
 	
 	public static class Demo extends GameSystem {
-		public void draw(GL2 gl) {
-			Object.render(gl);
+		public void draw(Graphics g) {
+			Object.render(g);
 			
-			master.setColor(1, 1, 1, 1);
-			master.drawRect(0, 0, 640, 480);
-			master.setColor(0, 0, 1, 1);
-			master.drawString(10, 10, "\n\nWelcome to n00blib!\n\nn00blib is a simple, lightweight Java game library built by a n00b, for a n00b.\n...This window is boring. Why don't you go take a look at https://github.com/m\naiorexminor/n00blib/wiki?\n\nAnyways. Good luck!");
+			g.setColor(1, 1, 1, 1);
+			g.drawRect(0, 0, 640, 480);
+			g.setColor(0, 0, 1, 1);
+			g.drawString(10, 10, "\n\nWelcome to n00blib!\n\nn00blib is a simple, lightweight Java game library built by a n00b, for a n00b.\n...This window is boring. Why don't you go take a look at https://github.com/m\naiorexminor/n00blib/wiki?\n\nAnyways. Good luck!");
 		}
 	}
 }
