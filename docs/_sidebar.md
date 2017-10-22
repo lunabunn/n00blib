@@ -1,3 +1,4 @@
 - **Getting Started**
  - [Installation](Installation.md)
  - [Introduction to Game Objects](Intro_to_game_objects.md)
+ - [Customizing Game Objects](Customizing_game_objects.md)
