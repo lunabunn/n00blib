@@ -10,4 +10,4 @@ The `GameSystem` class, also called a Game System, is a **n00blib** class that i
 ## Object
 The `Object` class is a n00blib class that every ingame object (the player, the enemy, the blocks, the whatever...) `extends`. They calculate their movement deltas and collision, and move accordingly.
 
-So. Are you ready to dive into the details? Click [here](https://maiorexminor.github.io/#/Basics/Intro_to_game_objects) when you are.
+So. Are you ready to dive into the details? Click [here](https://maiorexminor.github.io/n00blib/#/Basics/Intro_to_game_objects) when you are.
