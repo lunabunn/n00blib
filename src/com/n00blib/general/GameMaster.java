@@ -145,7 +145,7 @@ public class GameMaster implements GLEventListener, KeyListener, MouseListener, 
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
+		system.keyTyped(e.getKeyChar());
 		
 	}
 

@@ -92,6 +92,11 @@ public class GameSystem {
 		
 	}
 	
+	public void keyTyped(char keyChar) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	public static class Demo extends GameSystem {
 		public void draw(Graphics g) {
 			Object.render(g);

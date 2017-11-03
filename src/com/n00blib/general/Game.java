@@ -46,7 +46,7 @@ public class Game {
 		GLProfile profile = GLProfile.get(GLProfile.GL2);
 		GLCapabilities capabilities = new GLCapabilities(profile);
 		GLCanvas canvas = new GLCanvas(capabilities);
-		canvas.setSize(width, height);
+		canvas.setPreferredSize(new Dimension(width, height));
 		canvas.addGLEventListener((GLEventListener) master);
 		canvas.addKeyListener((KeyListener) master);
 		canvas.addMouseListener((MouseListener) master);
@@ -63,10 +63,11 @@ public class Game {
 		frame.add(canvas);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.addWindowListener(new WindowAdapter() {
 
 			@Override
-			public void windowClosed(WindowEvent e) {
+			public void windowClosing(WindowEvent e) {
 				system.gameEnd();
 				System.exit(0);
 				
